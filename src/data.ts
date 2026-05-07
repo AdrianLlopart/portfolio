@@ -65,7 +65,7 @@ export const projects: Project[] = [
             `Personal Portfolio Website showcasing projects, experience, and skills with a clean and responsive design.`,
         date: "2025",
         tags: ["GitHub Actions", "React", "Tailwind", "TypeScript", "Vite"],
-        websiteUrl: "https://adrianllopart.github.io/portfolio/",
+        websiteUrl: "https://adrianllopart.github.io/",
     },
     {
         id: "kinokraft",

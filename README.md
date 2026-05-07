@@ -1,3 +1,3 @@
 # Adrian Llopart's personal portfolio
 
-Access the portfolio [here](https://adrianllopart.github.io/portfolio/)
+Access the portfolio [here](https://adrianllopart.github.io/)

@@ -58,6 +58,16 @@ export interface Research extends BaseItem {
 
 export const projects: Project[] = [
     {
+        id: "h2r",
+        title: "Egocentric Monocular Video to Robot Retargeting",
+        icon: "ai",
+        description:
+            `System for retargeting human motion from egocentric monocular video to a humanoid robot. It includes modules for 2D hand detection, segmentation, depth estimation, 3D hand prediction, and motion retargeting to generate robot joint trajectories that mimic the human's movements in the video.`,
+        date: "2026",
+        tags: ["AI", "Docker", "Humanoid", "ML", "Depth Estimation", "Pose Estimation", "Python", "Robotics", "Transformer"],
+        videoUrls: ["https://youtu.be/QPpzRPD6vbc", "https://youtu.be/BHTDs8Q4bqs", "https://youtu.be/e5zlRqqjy50", "https://youtu.be/0P_l_DLwVpU"]
+    },
+    {
         id: "portfolio",
         title: "Personal Portfolio Website",
         icon: "webpage",
@@ -272,6 +282,20 @@ export const research: Research[] = [
 ];
 
 export const work: Experience[] = [
+    {
+        id: "qualia",
+        company: "Qualia",
+        role: "Consultant - Senior AI Engineer",
+        startDate: "2026",
+        endDate: "Present",
+        description: "Training robotic foundation models",
+        longDescription: "Consulting on the training of robotic foundation models for a robotics startup. This includes data collection and processing, model architecture design, training and evaluation of the models, and deployment in real-world robotic systems.",
+        tags: ["AI", "VLA", "CNN", "CV", "Docker", "ML", "MLOps", "Transformer", "Python", "Gstreamer", "Pose Estimation", "Depth Estimation", "Segmentation"],
+        location: "Copenhagen, Denmark",
+        websiteUrl: "https://qualiastudios.dev",
+        logoUrl: "logos/Qualia.jpeg",
+        relatedProjectIds: ["h2r"]
+    },
     {
         id: "mederi-ai",
         company: "MederiAI",

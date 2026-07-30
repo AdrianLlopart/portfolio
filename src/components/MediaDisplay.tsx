@@ -60,10 +60,10 @@ const FullscreenOverlay: React.FC = () => (
 const MEDIA_WIDTH = 280;
 const MEDIA_HEIGHT = 180;
 
-const MediaDisplay: React.FC<MediaLinks> = ({ videoUrls, imageUrls, websiteUrl, pdfUrl, slidesUrl, codeUrl }) => {
+const MediaDisplay: React.FC<MediaLinks> = ({ videoUrls, imageUrls, websiteUrl, docsUrl, pdfUrl, slidesUrl, codeUrl }) => {
   const [fullScreenMedia, setFullScreenMedia] = useState<{ type: 'video' | 'pdf' | 'slides' | 'image', url: string } | null>(null);
 
-  if ((!videoUrls || videoUrls.length === 0) && (!imageUrls || imageUrls.length === 0) && !websiteUrl && !pdfUrl && !slidesUrl && !codeUrl) return null;
+  if ((!videoUrls || videoUrls.length === 0) && (!imageUrls || imageUrls.length === 0) && !websiteUrl && !docsUrl && !pdfUrl && !slidesUrl && !codeUrl) return null;
 
   const formatPdfUrl = (url: string) => {
     if (url.startsWith('public/')) {
@@ -93,55 +93,61 @@ const MediaDisplay: React.FC<MediaLinks> = ({ videoUrls, imageUrls, websiteUrl, 
   // Row 3+: videoUrls
   const mediaItems: React.ReactNode[] = [];
 
-  // Row 1: Website and Code buttons (with link previews)
-  if (websiteUrl && isHttp(websiteUrl)) {
-    mediaItems.push(
-      <MediaCard key="website" onClick={() => window.open(websiteUrl, '_blank')}>
-        <Box 
-          width={MEDIA_WIDTH}
-          height={MEDIA_HEIGHT}
-          bg="canvas.subtle" 
-          borderRadius={1} 
-          overflow="hidden"
-          position="relative"
+  // Row 1: Website, Docs and Code buttons (with link previews)
+  const linkPreviewCard = (key: string, url: string, label: string, icon: React.ReactNode) => (
+    <MediaCard key={key} onClick={() => window.open(url, '_blank')}>
+      <Box
+        width={MEDIA_WIDTH}
+        height={MEDIA_HEIGHT}
+        bg="canvas.subtle"
+        borderRadius={1}
+        overflow="hidden"
+        position="relative"
+      >
+        <Box
+          as="iframe"
+          src={url}
+          width="100%"
+          height="100%"
+          sx={{
+            border: 0,
+            pointerEvents: 'none',
+            transform: 'scale(0.5)',
+            transformOrigin: 'top left',
+            width: '200%',
+            height: '200%'
+          }}
+          title={`${label} preview`}
+        />
+        {/* Overlay to capture click */}
+        <Box position="absolute" top={0} left={0} right={0} bottom={0} bg="transparent" />
+        {/* Label */}
+        <Box
+          position="absolute"
+          bottom={2}
+          left={2}
+          px={2}
+          py={1}
+          bg="canvas.default"
+          borderRadius={1}
+          display="flex"
+          alignItems="center"
+          sx={{ gap: 1, opacity: 0.9 }}
         >
-          <Box 
-            as="iframe" 
-            src={websiteUrl} 
-            width="100%" 
-            height="100%" 
-            sx={{ 
-              border: 0, 
-              pointerEvents: 'none',
-              transform: 'scale(0.5)',
-              transformOrigin: 'top left',
-              width: '200%',
-              height: '200%'
-            }} 
-            title="Website preview"
-          />
-          {/* Overlay to capture click */}
-          <Box position="absolute" top={0} left={0} right={0} bottom={0} bg="transparent" />
-          {/* Label */}
-          <Box
-            position="absolute"
-            bottom={2}
-            left={2}
-            px={2}
-            py={1}
-            bg="canvas.default"
-            borderRadius={1}
-            display="flex"
-            alignItems="center"
-            sx={{ gap: 1, opacity: 0.9 }}
-          >
-            <GlobeIcon size={16} />
-            <Box as="span" fontSize={1}>Website</Box>
-          </Box>
-          <FullscreenOverlay />
+          {icon}
+          <Box as="span" fontSize={1}>{label}</Box>
         </Box>
-      </MediaCard>
-    );
+        <FullscreenOverlay />
+      </Box>
+    </MediaCard>
+  );
+
+  if (websiteUrl && isHttp(websiteUrl)) {
+    mediaItems.push(linkPreviewCard('website', websiteUrl, 'Website', <GlobeIcon size={16} />));
+  }
+
+  if (docsUrl && isHttp(docsUrl)) {
+    mediaItems.push(linkPreviewCard('docs', docsUrl, 'Docs', <BookIcon size={16} />));
   }
 
   if (codeUrl && isHttp(codeUrl)) {

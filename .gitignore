@@ -23,3 +23,6 @@ Thumbs.db
 # Logs
 logs/
 *.log
+
+# Generated CV intermediate (PDF is committed, HTML is not)
+cv/cv.html

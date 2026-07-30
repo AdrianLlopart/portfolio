@@ -2,6 +2,7 @@ export interface MediaLinks {
     videoUrls?: string[];
     imageUrls?: string[];
     websiteUrl?: string;
+    docsUrl?: string;
     pdfUrl?: string;
     slidesUrl?: string;
     codeUrl?: string;
@@ -283,14 +284,29 @@ export const research: Research[] = [
 
 export const work: Experience[] = [
     {
+        id: "openral",
+        company: "OpenRAL",
+        role: "Founder",
+        startDate: "2026",
+        endDate: "Present",
+        description: "Open-source Robot Agentic Layer: the agentic harness for physical AI.",
+        longDescription: "Created and lead OpenRAL, an open-source, ROS 2-native Robot Agentic Layer: the typed, traceable, safety-first runtime that holds an embodied-AI stack together — fast VLA policies (30-200 Hz), slow LLM reasoning, perception and classical control. Features typed Pydantic v2 contracts between layers, hot-swappable robot skills (VLA policies, perception detectors, scene VLMs), tf2-aware scene graphs, a C++ safety kernel with deny-by-default access control and E-stop, and full observability via OpenTelemetry traces replayable in Foxglove. Apache 2.0 licensed, built in collaboration with MakerMods and contributors from NYU Shanghai.",
+        tags: ["AI", "C++", "CNN", "CV", "Depth Estimation", "Docker", "Gstreamer", "LLM", "ML", "Open Source", "Physical AI", "Pose Estimation", "Python", "ROS", "Robotics", "Safety", "Segmentation", "Transformer", "VLA"],
+        location: "Copenhagen, Denmark",
+        websiteUrl: "https://openral.com",
+        docsUrl: "https://docs.openral.com/",
+        codeUrl: "https://github.com/OpenRAL/openral",
+        logoUrl: "logos/OpenRAL.png"
+    },
+    {
         id: "qualia",
         company: "Qualia",
         role: "Consultant - Senior AI Engineer",
         startDate: "2026",
         endDate: "Present",
         description: "Training robotic foundation models",
-        longDescription: "Consulting on the training of robotic foundation models for a robotics startup. This includes data collection and processing, model architecture design, training and evaluation of the models, and deployment in real-world robotic systems.",
-        tags: ["AI", "VLA", "CNN", "CV", "Docker", "ML", "MLOps", "Transformer", "Python", "Gstreamer", "Pose Estimation", "Depth Estimation", "Segmentation"],
+        longDescription: "Consulting on the training of robotic foundation models for a robotics startup. Built an egocentric-video-to-robot retargeting pipeline that converts monocular human video into robot training data for VLA policies, and deployed the resulting models on OpenArms and Flexiv robot arms. Covers data collection and processing, model architecture design, training and evaluation, and deployment on real-world robotic systems.",
+        tags: ["AI", "VLA", "CNN", "CV", "Docker", "ML", "MLOps", "Physical AI", "Transformer", "Python", "Gstreamer", "Pose Estimation", "Depth Estimation", "Segmentation"],
         location: "Copenhagen, Denmark",
         websiteUrl: "https://qualiastudios.dev",
         logoUrl: "logos/Qualia.jpeg",
@@ -301,7 +317,7 @@ export const work: Experience[] = [
         company: "MederiAI",
         role: "CEO & Co-Founder",
         startDate: "2024",
-        endDate: "Present",
+        endDate: "2026",
         description: "Vision AI models for gastrointestinal lesions in Video Capsule Endoscopy",
         longDescription: "Leading an early stage startup to develop vision AI models that analyses video-capsule endoscopy footage to detect gastrointestinal anomalies rapidly and with high accuracy. Its platform reduces review time from roughly two hours to about fifteen minutes while significantly lowering missed-lesion rates and associated diagnostic delays. The company’s spatio-temporal AI model provides hospitals and clinics with faster, safer, and more efficient small-bowel diagnostics. Raised 300k€ in pre-seed funding to date.",
         tags: ["AI", "AWS", "CNN", "CV", "Docker", "Leadership", "MedTech", "ML", "MLOps", "Transformer"],
@@ -315,9 +331,9 @@ export const work: Experience[] = [
         company: "Jabra GN",
         role: "Senior Machine Learning Engineer",
         startDate: "2024",
-        endDate: "Present",
-        description: "Leading multimodal AI initiatives for videobars.",
-        longDescription: "Synthetic multimodal data generation and annotation. Building, training and evaluating multimodal deep learning models and pipelines for videobars for meeting rooms. Also built the MLOPs stack of the team from scratch, including data versioning, model training orchestration, deployment and monitoring.",
+        endDate: "2026",
+        description: "Multimodal AI on edge devices for meeting-room videobars.",
+        longDescription: "Deployed multimodal deep learning models (visual tracking, speech diarization) on edge devices powering videobars for meeting rooms. Built the team's MLOps stack from scratch, including data versioning, model training orchestration, deployment and monitoring. Built the generative Video + Audio data pipeline for synthetic multimodal data generation and annotation.",
         relatedProjectIds: ["ast-doa"],
         tags: ["AI", "Azure", "CNN", "Docker", "Edge", "Gstreamer", "Leadership", "ML", "MLOps", "Multimodal", "Python", "Segmentation", "Transformer"],
         location: "Copenhagen, Denmark",
@@ -484,6 +500,6 @@ export const education: Education[] = [
     }
 ];
 
-export const bioTitle = "Senior AI Engineer | Founder | PhD";
+export const bioTitle = "Senior AI and Robotics Engineer | Founder";
 export const bioSubTitle = "Multimodal AI & Humanoid Robotics";
 export const bioDescription = "**Product-oriented AI engineer** with a proven track record of developing and implementing **cutting-edge deep learning models** on-cloud and on-device. Passionate about the intersection between **AI** and **Robotics**.";

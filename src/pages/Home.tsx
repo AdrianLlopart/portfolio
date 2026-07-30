@@ -41,7 +41,7 @@ const Home: React.FC = () => {
             />
           </Box>
           <Box mt={3} display="flex" flexDirection="column" alignItems="center">
-            <Heading as="h1" sx={{ fontSize: 4, textAlign: 'center' }}>Adrian Llopart</Heading>
+            <Heading as="h1" sx={{ fontSize: 4, textAlign: 'center' }}>Adrian Llopart, PhD</Heading>
             <Box mt={3} display="flex" sx={{ gap: 3 }} alignItems="center" justifyContent="center">
               <Tooltip aria-label="GitHub">
                 <Link href="https://github.com/AdrianLlopart" target="_blank" sx={{ color: 'fg.muted', '&:hover': { color: 'accent.fg' } }}>

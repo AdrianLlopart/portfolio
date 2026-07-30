@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cv": "pandoc cv/cv.md -f markdown -t html5 --standalone -c cv.css --metadata pagetitle='Adrian Llopart, PhD - CV' -o cv/cv.html && chromium --headless --no-sandbox --disable-gpu --no-pdf-header-footer --print-to-pdf=public/presentations/adrianllopart_CV.pdf \"file://$PWD/cv/cv.html\""
   },
   "dependencies": {
     "@primer/react": "^36.0.0",

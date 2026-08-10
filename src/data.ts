@@ -60,12 +60,12 @@ export interface Research extends BaseItem {
 export const projects: Project[] = [
     {
         id: "h2r",
-        title: "Egocentric Monocular Video to Robot Retargeting",
+        title: "Human Demonstrations to VLA Policies for OpenArm & Flexiv",
         icon: "ai",
         description:
-            `System for retargeting human motion from egocentric monocular video to a humanoid robot. It includes modules for 2D hand detection, segmentation, depth estimation, 3D hand prediction, and motion retargeting to generate robot joint trajectories that mimic the human's movements in the video.`,
+            `End-to-end pipeline that retargets egocentric human video to UMI-gripper and robot actions for OpenArm and Flexiv. The system combines 2D hand detection, segmentation, depth estimation, 3D hand prediction, motion retargeting, data augmentation and VLA-policy training from human demonstrations.`,
         date: "2026",
-        tags: ["AI", "Docker", "Humanoid", "ML", "Depth Estimation", "Pose Estimation", "Python", "Robotics", "Transformer"],
+        tags: ["AI", "Behavior Cloning", "DAgger", "Depth Estimation", "Flow Matching", "Humanoid", "Imitation Learning", "ML", "Pose Estimation", "Python", "Robotics", "VLA"],
         videoUrls: ["https://youtu.be/QPpzRPD6vbc", "https://youtu.be/BHTDs8Q4bqs", "https://youtu.be/e5zlRqqjy50", "https://youtu.be/0P_l_DLwVpU"]
     },
     {
@@ -287,11 +287,11 @@ export const work: Experience[] = [
         id: "openral",
         company: "OpenRAL",
         role: "Founder",
-        startDate: "2026",
+        startDate: "Jul 2026",
         endDate: "Present",
-        description: "Open-source Robot Agentic Layer: the agentic harness for physical AI.",
-        longDescription: "Created and lead OpenRAL, an open-source, ROS 2-native Robot Agentic Layer: the typed, traceable, safety-first runtime that holds an embodied-AI stack together — fast VLA policies (30-200 Hz), slow LLM reasoning, perception and classical control. Features typed Pydantic v2 contracts between layers, hot-swappable robot skills (VLA policies, perception detectors, scene VLMs), tf2-aware scene graphs, a C++ safety kernel with deny-by-default access control and E-stop, and full observability via OpenTelemetry traces replayable in Foxglove. Apache 2.0 licensed, built in collaboration with MakerMods and contributors from NYU Shanghai.",
-        tags: ["AI", "C++", "CNN", "CV", "Depth Estimation", "Docker", "Gstreamer", "LLM", "ML", "Open Source", "Physical AI", "Pose Estimation", "Python", "ROS", "Robotics", "Safety", "Segmentation", "Transformer", "VLA"],
+        description: "Open-source VLA evaluation and deployment platform for embodied AI.",
+        longDescription: "Founded OpenRAL, an open-source, ROS 2-native runtime for developing, evaluating and deploying VLA-based robot skills across real hardware and simulation. Integrated Pi0.5, NVIDIA GR00T N1.7, LingBot-VLA, xVLA, RLDX-1, SmolVLA, ACT and diffusion policies with typed robot interfaces, reproducible benchmarks, observability and deployment tooling. The stack combines VLMs, open-vocabulary detection, monocular depth, visual SLAM, tf2-aware 3D world state, Nav2, MoveIt/cuMotion planning and a C++ collision-aware safety kernel. Supports workflows across Gazebo, MuJoCo and Isaac Sim, including LIBERO, RoboCasa and BEHAVIOR-1K benchmarks.",
+        tags: ["AI", "C++", "Depth Estimation", "Diffusion Policy", "Gazebo", "Isaac Sim", "LLM", "MuJoCo", "Navigation", "Open Source", "Physical AI", "Point Clouds", "ROS", "Robotics", "Safety", "SLAM", "Simulation", "VLA", "VLM"],
         location: "Copenhagen, Denmark",
         websiteUrl: "https://openral.com",
         docsUrl: "https://docs.openral.com/",
@@ -301,37 +301,23 @@ export const work: Experience[] = [
     {
         id: "qualia",
         company: "Qualia",
-        role: "Consultant - Senior AI Engineer",
+        role: "Senior Robotics and AI Engineer",
         startDate: "2026",
         endDate: "Present",
-        description: "Training robotic foundation models",
-        longDescription: "Consulting on the training of robotic foundation models for a robotics startup. Built an egocentric-video-to-robot retargeting pipeline that converts monocular human video into robot training data for VLA policies, and deployed the resulting models on OpenArms and Flexiv robot arms. Covers data collection and processing, model architecture design, training and evaluation, and deployment on real-world robotic systems.",
-        tags: ["AI", "VLA", "CNN", "CV", "Docker", "ML", "MLOps", "Physical AI", "Transformer", "Python", "Gstreamer", "Pose Estimation", "Depth Estimation", "Segmentation"],
+        description: "VLA training and real-world deployment from human demonstrations.",
+        longDescription: "Built a demonstration-data pipeline that retargets egocentric human video to UMI-gripper and robot actions for OpenArm and Flexiv, including cleaning and data augmentation. Trained and evaluated Pi0.5 and NVIDIA GR00T N1.7 robot policies using behavior cloning, DAgger and flow matching; validated two real-robot tasks from initial curated human demonstrations. Deployed and optimized robot policies for real-time inference across NVIDIA Jetson platforms, with ongoing work on a GStreamer/NVMM pipeline to minimize end-to-end processing overhead.",
+        tags: ["AI", "Behavior Cloning", "DAgger", "Depth Estimation", "Flow Matching", "GStreamer", "Imitation Learning", "Jetson", "MLOps", "NVMM", "Physical AI", "Pose Estimation", "Python", "Robotics", "TensorRT", "VLA"],
         location: "Copenhagen, Denmark",
         websiteUrl: "https://qualiastudios.dev",
         logoUrl: "logos/Qualia.jpeg",
         relatedProjectIds: ["h2r"]
     },
     {
-        id: "mederi-ai",
-        company: "MederiAI",
-        role: "CEO & Co-Founder",
-        startDate: "2024",
-        endDate: "2026",
-        description: "Vision AI models for gastrointestinal lesions in Video Capsule Endoscopy",
-        longDescription: "Leading an early stage startup to develop vision AI models that analyses video-capsule endoscopy footage to detect gastrointestinal anomalies rapidly and with high accuracy. Its platform reduces review time from roughly two hours to about fifteen minutes while significantly lowering missed-lesion rates and associated diagnostic delays. The company’s spatio-temporal AI model provides hospitals and clinics with faster, safer, and more efficient small-bowel diagnostics. Raised 300k€ in pre-seed funding to date.",
-        tags: ["AI", "AWS", "CNN", "CV", "Docker", "Leadership", "MedTech", "ML", "MLOps", "Transformer"],
-        location: "Copenhagen, Denmark",
-        websiteUrl: "https://mederiai.com",
-        logoUrl: "logos/MederiAI.png",
-        videoUrls: ["https://youtu.be/MroXxuon9N8"]
-    },
-    {
         id: "jabra-gn",
         company: "Jabra GN",
         role: "Senior Machine Learning Engineer",
-        startDate: "2024",
-        endDate: "2026",
+        startDate: "Aug 2024",
+        endDate: "Present",
         description: "Multimodal AI on edge devices for meeting-room videobars.",
         longDescription: "Deployed multimodal deep learning models (visual tracking, speech diarization) on edge devices powering videobars for meeting rooms. Built the team's MLOps stack from scratch, including data versioning, model training orchestration, deployment and monitoring. Built the generative Video + Audio data pipeline for synthetic multimodal data generation and annotation.",
         relatedProjectIds: ["ast-doa"],
@@ -340,11 +326,25 @@ export const work: Experience[] = [
         logoUrl: "logos/Jabra.webp"
     },
     {
+        id: "mederi-ai",
+        company: "MederiAI",
+        role: "CEO & Co-Founder",
+        startDate: "Feb 2024",
+        endDate: "Aug 2026",
+        description: "Vision AI models for gastrointestinal lesions in Video Capsule Endoscopy",
+        longDescription: "Led an early-stage startup developing vision AI models that analyse video-capsule endoscopy footage to detect gastrointestinal anomalies rapidly and with high accuracy. Its platform reduces review time from roughly two hours to about fifteen minutes while significantly lowering missed-lesion rates and associated diagnostic delays. The company’s spatio-temporal AI model provides hospitals and clinics with faster, safer, and more efficient small-bowel diagnostics. Raised 300k€ in pre-seed funding.",
+        tags: ["AI", "AWS", "CNN", "CV", "Docker", "Leadership", "MedTech", "ML", "MLOps", "Transformer"],
+        location: "Copenhagen, Denmark",
+        websiteUrl: "https://mederiai.com",
+        logoUrl: "logos/MederiAI.png",
+        videoUrls: ["https://youtu.be/MroXxuon9N8"]
+    },
+    {
         id: "veo",
         company: "Veo Technologies",
         role: "Senior Machine Learning Engineer",
-        startDate: "2021",
-        endDate: "2024",
+        startDate: "Jan 2021",
+        endDate: "May 2024",
         description: "Video-based sports analytics using deep learning",
         longDescription: `Building, training and deploying of production-ready deep learning models to be run on cloud and edge devices. This includes data collection, annotation and processing; model definition, training, optimization, profiling, testing and developing the infrastructure for inference using AWS and Gstreamer. Dealt with player and ball detection and tracking, event recognition and advanced match analytics using AI.`,
         tags: ["AI", "AWS", "CNN", "Docker", "Edge", "Gstreamer", "Leadership", "ML", "MLOps", "Multimodal", "Pose Estimation", "Python", "SportTech", "Transformer"],
@@ -358,8 +358,8 @@ export const work: Experience[] = [
         id: "huawei",
         company: "Huawei",
         role: "Senior AI Developer",
-        startDate: "2019",
-        endDate: "2021",
+        startDate: "Jan 2019",
+        endDate: "Jan 2021",
         description: "Researcher and development of SOTA Deep Learning multimodal models",
         longDescription: "Re-implementation and improvement of state-of-the-art methods for Deep Learning in Computer Vision tasks. These include Object recognition, detection and segmentation (one and two stage),  Human Action recognition and detection, 3D Human Keypoint Estimation, SuperResolution and the supervision of interns",
         tags: ["AI", "AWS", "CNN", "Docker", "GAN", "ML", "Multimodal", "Pose Estimation", "Python", "SR", "Segmentation", "Transformer"],
@@ -411,9 +411,9 @@ export const education: Education[] = [
     {
         id: "kaist-visit",
         institution: "KAIST",
-        degree: "Visiting PhD Researcher",
-        startDate: "2018",
-        endDate: "2019",
+        degree: "PhD External Stay",
+        startDate: "Jan 2017",
+        endDate: "Sep 2017",
         description: "Embodied AI for Humanoid Service Robots",
         longDescription: "External Research stay focusing on Humanoid Service Robots at the Robot Intelligence and Technology (RIT) Lab under Professor Jong-Hwan Kim supervision. Worked on deep learning techniques for improving 3D perception and object recognition/manipulation for humanoid robots.",
         tags: ["AI", "C++", "CNN", "CV", "Humanoid", "ML", "Manipulation", "PCL", "Pose Estimation", "Python", "ROS", "Robotics", "SLAM", "YOLO"],
@@ -424,9 +424,9 @@ export const education: Education[] = [
     {
         id: "dtu-phd",
         institution: "Technical University of Denmark",
-        degree: "PhD in Humanoid Robotics and Artificial Intelligence",
-        startDate: "2016",
-        endDate: "2020",
+        degree: "PhD in Robotics and Artificial Intelligence",
+        startDate: "Dec 2015",
+        endDate: "Dec 2018",
         description: "Perceptive AI and 3D world modelling for Humanoid Robots.",
         longDescription: "Focused on enabling robots to handle kitchen chores and interact with unknown objects. Published research in conferences like RiTA.",
         tags: ["AI", "C++", "CNN", "CV", "Humanoid", "ML", "Manipulation", "PCL", "Pose Estimation", "Python", "ROS", "Robotics", "SLAM", "YOLO"],
@@ -439,9 +439,10 @@ export const education: Education[] = [
     {
         id: "tokyo-visit",
         institution: "Tokyo University",
-        degree: "Master Thesis Research Visit",
+        degree: "Master Thesis: Teleoperation of Miniaturized Humanoid Robots",
+        startDate: "Apr 2015",
         description: "Teleoperation of miniaturized humanoid robots",
-        endDate: "2015",
+        endDate: "Aug 2015",
         longDescription: `Exchange abroad to write the Master Thesis for a duration of 4 months at the Department of Computer Science in Tokyo University under *Professor Takeo Igarashi* and *Associate Professor Daisuke Sakamoto*. The project consisted on developing a **teleoperation system for miniaturized humanoid robots** using VR devices, pose estimation and handheld controllers.`,
         tags: ["Humanoid", "Pose Estimation", "Research", "Robotics", "Teleoperation", "VR"],
         logoUrl: "logos/TU.png",
@@ -452,9 +453,9 @@ export const education: Education[] = [
     {
         id: "dtu-master",
         institution: "Technical University of Denmark",
-        degree: "MSc in Automation and Robotics",
-        startDate: "2013",
-        endDate: "2015",
+        degree: "Master of Science in Automation and Robotics",
+        startDate: "Sep 2013",
+        endDate: "Aug 2015",
         description: "Grade: 10",
         longDescription: "Double degree programme between Universitat Politecnica de Catalunya and Technical University of Denmark",
         tags: ["Automation", "CS", "Control", "MSc", "Robotics", "Signal Processing"],
@@ -500,6 +501,6 @@ export const education: Education[] = [
     }
 ];
 
-export const bioTitle = "Senior AI and Robotics Engineer | Founder";
-export const bioSubTitle = "Multimodal AI & Humanoid Robotics";
-export const bioDescription = "**Product-oriented AI engineer** with a proven track record of developing and implementing **cutting-edge deep learning models** on-cloud and on-device. Passionate about the intersection between **AI** and **Robotics**.";
+export const bioTitle = "Senior AI & Robotics Engineer";
+export const bioSubTitle = "VLA Foundation Models, Imitation Learning & Edge Deployment";
+export const bioDescription = "**Robotics PhD and senior AI engineer** building and deploying **VLA systems for real-world robots**. Experience with robotic foundation models, imitation learning, generative policies, simulation-to-real evaluation, multimodal perception, autonomy and GPU-accelerated edge deployment.";

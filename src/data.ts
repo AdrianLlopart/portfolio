@@ -78,8 +78,8 @@ export const projects: Project[] = [
         videoUrls: ["https://youtu.be/4Wnqb7tKVk8"]
     },
     {
-        id: "videotech-mlops",
-        title: "VideoTech MLOps and Model Training Platform",
+        id: "mlops",
+        title: "MLOps and Model Training Platform",
         icon: "ai",
         description: "Built the team's machine-learning development and training platform from scratch. The shared stack provides reproducible GPU Docker environments, local and Azure ML job runners, Hydra experiment configuration, MLflow tracking, automated linting and GPU tests, container publishing through Azure DevOps, and deployment of versioned environments to Azure ML. It also supports post-training optimization and quantization workflows for edge deployment with TensorRT, SNPE, AIMET, and Qualcomm AI Hub.",
         date: "2025",
@@ -345,7 +345,7 @@ export const work: Experience[] = [
         endDate: "Present",
         description: "Multimodal AI on edge devices for meeting-room videobars.",
         longDescription: "Deployed multimodal deep learning models (visual tracking, speech diarization) on edge devices powering videobars for meeting rooms. Built the team's MLOps stack from scratch, including data versioning, model training orchestration, deployment and monitoring. Built the generative Video + Audio data pipeline for synthetic multimodal data generation and annotation.",
-        relatedProjectIds: ["ast-doa", "spatial-ai", "videotech-mlops", "sinthagen"],
+        relatedProjectIds: ["ast-doa", "spatial-ai", "mlops", "sinthagen"],
         tags: ["AI", "Azure", "CNN", "Docker", "Edge", "Gstreamer", "Leadership", "ML", "MLOps", "Multimodal", "Python", "Segmentation", "Transformer"],
         location: "Copenhagen, Denmark",
         logoUrl: "logos/Jabra.webp"

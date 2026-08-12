@@ -69,6 +69,15 @@ export const projects: Project[] = [
         videoUrls: ["https://youtu.be/QPpzRPD6vbc", "https://youtu.be/BHTDs8Q4bqs", "https://youtu.be/e5zlRqqjy50", "https://youtu.be/0P_l_DLwVpU"]
     },
     {
+        id: "spatial-ai",
+        title: "Spatial AI for Semantic 3D Meeting-Room Understanding",
+        icon: "ai",
+        description: "Pipeline for building semantic 3D representations of meeting rooms from multi-camera captures. It reconstructs colored point clouds, associates detected room objects with oriented 3D bounding boxes, and provides a PyVista viewer for validating camera geometry, object centers, and scene labels across multiple rooms.",
+        date: "2026",
+        tags: ["3D", "AI", "CV", "ML", "Point Clouds", "Python", "Segmentation", "Spatial AI"],
+        videoUrls: ["https://youtu.be/4Wnqb7tKVk8"]
+    },
+    {
         id: "portfolio",
         title: "Personal Portfolio Website",
         icon: "webpage",
@@ -320,7 +329,7 @@ export const work: Experience[] = [
         endDate: "Present",
         description: "Multimodal AI on edge devices for meeting-room videobars.",
         longDescription: "Deployed multimodal deep learning models (visual tracking, speech diarization) on edge devices powering videobars for meeting rooms. Built the team's MLOps stack from scratch, including data versioning, model training orchestration, deployment and monitoring. Built the generative Video + Audio data pipeline for synthetic multimodal data generation and annotation.",
-        relatedProjectIds: ["ast-doa"],
+        relatedProjectIds: ["ast-doa", "spatial-ai"],
         tags: ["AI", "Azure", "CNN", "Docker", "Edge", "Gstreamer", "Leadership", "ML", "MLOps", "Multimodal", "Python", "Segmentation", "Transformer"],
         location: "Copenhagen, Denmark",
         logoUrl: "logos/Jabra.webp"

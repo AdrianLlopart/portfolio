@@ -66,7 +66,7 @@ export const projects: Project[] = [
             `End-to-end pipeline that retargets egocentric human video to UMI-gripper and robot actions for OpenArm and Flexiv. The system combines 2D hand detection, segmentation, depth estimation, 3D hand prediction, motion retargeting, data augmentation and VLA-policy training from human demonstrations.`,
         date: "2026",
         tags: ["AI", "Behavior Cloning", "DAgger", "Depth Estimation", "Flow Matching", "Humanoid", "Imitation Learning", "ML", "Pose Estimation", "Python", "Robotics", "VLA"],
-        videoUrls: ["https://youtu.be/QPpzRPD6vbc", "https://youtu.be/BHTDs8Q4bqs", "https://youtu.be/e5zlRqqjy50", "https://youtu.be/0P_l_DLwVpU"]
+        videoUrls: ["https://youtu.be/lrmVrO4fyOs", "https://youtu.be/z0FPsYKbQuE", "https://youtu.be/QPpzRPD6vbc", "https://youtu.be/BHTDs8Q4bqs", "https://youtu.be/e5zlRqqjy50", "https://youtu.be/0P_l_DLwVpU"]
     },
     {
         id: "spatial-ai",

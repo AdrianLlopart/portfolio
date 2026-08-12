@@ -66,7 +66,32 @@ export const projects: Project[] = [
             `End-to-end pipeline that retargets egocentric human video to UMI-gripper and robot actions for OpenArm and Flexiv. The system combines 2D hand detection, segmentation, depth estimation, 3D hand prediction, motion retargeting, data augmentation and VLA-policy training from human demonstrations.`,
         date: "2026",
         tags: ["AI", "Behavior Cloning", "DAgger", "Depth Estimation", "Flow Matching", "Humanoid", "Imitation Learning", "ML", "Pose Estimation", "Python", "Robotics", "VLA"],
-        videoUrls: ["https://youtu.be/QPpzRPD6vbc", "https://youtu.be/BHTDs8Q4bqs", "https://youtu.be/e5zlRqqjy50", "https://youtu.be/0P_l_DLwVpU"]
+        videoUrls: ["https://youtu.be/lrmVrO4fyOs", "https://youtu.be/z0FPsYKbQuE", "https://youtu.be/QPpzRPD6vbc", "https://youtu.be/BHTDs8Q4bqs", "https://youtu.be/e5zlRqqjy50", "https://youtu.be/0P_l_DLwVpU"]
+    },
+    {
+        id: "spatial-ai",
+        title: "Spatial AI for Semantic 3D Meeting-Room Understanding",
+        icon: "ai",
+        description: "Pipeline for building semantic 3D representations of meeting rooms from multi-camera captures. It reconstructs colored point clouds, associates detected room objects with oriented 3D bounding boxes, and provides a PyVista viewer for validating camera geometry, object centers, and scene labels across multiple rooms.",
+        date: "2026",
+        tags: ["3D", "AI", "CV", "ML", "Point Clouds", "Python", "Segmentation", "Spatial AI"],
+        videoUrls: ["https://youtu.be/4Wnqb7tKVk8"]
+    },
+    {
+        id: "mlops",
+        title: "MLOps and Model Training Platform",
+        icon: "ai",
+        description: "Built the team's machine-learning development and training platform from scratch. The shared stack provides reproducible GPU Docker environments, local and Azure ML job runners, Hydra experiment configuration, MLflow tracking, automated linting and GPU tests, container publishing through Azure DevOps, and deployment of versioned environments to Azure ML. It also supports post-training optimization and quantization workflows for edge deployment with TensorRT, SNPE, AIMET, and Qualcomm AI Hub.",
+        date: "2025",
+        tags: ["AI", "AIMET", "Azure", "Azure ML", "CI/CD", "Docker", "Edge", "Hydra", "ML", "MLflow", "MLOps", "Python", "Qualcomm AI Hub", "TensorRT"],
+    },
+    {
+        id: "sinthagen",
+        title: "SinthaGen: Multimodal Synthetic Data Generation",
+        icon: "ai",
+        description: "Composable generative-data platform for producing and annotating training datasets at scale. It combines LLM-based prompt generation with text-to-image, image-to-video, text-to-video, speech, and audio-driven video models, then stores media and metadata through Azure Blob workflows. The system supports Qwen Image, Wan, Chatterbox, InfiniteTalk, and multi-stage audio-to-video pipelines for synthetic meeting-room and conversational data.",
+        date: "2026",
+        tags: ["AI", "Audio", "Azure", "Docker", "GenAI", "LLM", "Multimodal", "Python", "Synthetic Data", "Video"],
     },
     {
         id: "portfolio",
@@ -320,7 +345,7 @@ export const work: Experience[] = [
         endDate: "Present",
         description: "Multimodal AI on edge devices for meeting-room videobars.",
         longDescription: "Deployed multimodal deep learning models (visual tracking, speech diarization) on edge devices powering videobars for meeting rooms. Built the team's MLOps stack from scratch, including data versioning, model training orchestration, deployment and monitoring. Built the generative Video + Audio data pipeline for synthetic multimodal data generation and annotation.",
-        relatedProjectIds: ["ast-doa"],
+        relatedProjectIds: ["ast-doa", "spatial-ai", "mlops", "sinthagen"],
         tags: ["AI", "Azure", "CNN", "Docker", "Edge", "Gstreamer", "Leadership", "ML", "MLOps", "Multimodal", "Python", "Segmentation", "Transformer"],
         location: "Copenhagen, Denmark",
         logoUrl: "logos/Jabra.webp"

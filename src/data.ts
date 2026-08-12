@@ -82,7 +82,7 @@ export const projects: Project[] = [
         title: "VideoTech MLOps and Model Training Platform",
         icon: "ai",
         description: "Built the team's machine-learning development and training platform from scratch. The shared stack provides reproducible GPU Docker environments, local and Azure ML job runners, Hydra experiment configuration, MLflow tracking, automated linting and GPU tests, container publishing through Azure DevOps, and deployment of versioned environments to Azure ML. It also supports post-training optimization and quantization workflows for edge deployment with TensorRT, SNPE, AIMET, and Qualcomm AI Hub.",
-        date: "2026",
+        date: "2025",
         tags: ["AI", "AIMET", "Azure", "Azure ML", "CI/CD", "Docker", "Edge", "Hydra", "ML", "MLflow", "MLOps", "Python", "Qualcomm AI Hub", "TensorRT"],
     },
     {
